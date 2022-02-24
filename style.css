@@ -259,6 +259,15 @@ body {
         color: var(--hover);
         border-color: var(--hover);
     }
+
+    .timer-container {
+        width: auto;
+        gap: 10px;
+    }
+
+    .timer-container .item .item-number,  .timer-container .division {
+        font-size: 3.5rem
+    }
 }
 
 @media (max-width: 500px) {
