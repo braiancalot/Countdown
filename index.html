@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Countdown</title>
+</head>
+<body>
+    <div class="left-container">
+        <div class="info-box">
+            <h1 class="title">Ready to launch in...</h1>
+            <div class="timer-container">
+                <div class="item">
+                    <p class="item-name">Days</p>
+                    <p class="item-number">08</p>
+                </div>
+                <div class="division">:</div>
+                <div class="item">
+                    <p class="item-name">Hours</p>
+                    <p class="item-number">12</p>
+                </div>
+                <div class="division">:</div>
+                <div class="item">
+                    <p class="item-name">Minutes</p>
+                    <p class="item-number">44</p>
+                </div>
+                <div class="division">:</div>
+                <div class="item">
+                    <p class="item-name">Seconds</p>
+                    <p class="item-number">28</p>
+                </div>
+            </div>
+            <h2 class="description">Inscreva-se para saber mais sobre o lançamento</h2>
+            <button class="button button-open">Inscreva-se</button>
+        </div>
+    </div>
+    <div class="right-container">
+        <img class="image" src="assets/rocket.svg" alt="rocket">
+    </div>
+    <div class="modal-container">
+        <div class="modal-box">
+            <p class="modal-title">Registre-se para ser avisado</p>
+            <form class="form">
+                <label for="name" class="label">Nome:</label>
+                <input type="text" id="name" name="name" class="input" placeholder="Digite seu nome" autocomplete="off" required>
+                <label for="email" class="label">Email:</label>
+                <input type="email" id="email" name="email" class="input" placeholder="Digite seu email" autocomplete="off" required>
+                <button class="button" type="submit">Inscreva-se</button>
+            </form>
+            <button class="button-close">X</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

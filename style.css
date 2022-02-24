@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --black: #4D4C59;
+    --purple: #6C63FF;
+    --hover: #3f3b91;
+    --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+  }
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1.3rem;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Left Container */
+.left-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-box {
+    width: auto;
+    /* height: 38%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--purple);
+    letter-spacing: 0.25rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.timer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.timer-container .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-container .item .item-name {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--light-grey);
+}
+
+.timer-container .item .item-number,  .timer-container .division   
+{
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.timer-container .division {
+    align-self: flex-end;
+}
+
+.description {
+    font-size: 0.875rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.button {
+    background-color: var(--purple);
+    padding: 15px 40px;
+    border-radius: 10px;
+    border: none;
+    color: #FFF;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.button:hover {
+    background-color: var(--hover);
+}
+
+.button:active {
+    background-color: var(--purple);
+    background-image: none;
+}
+
+/* Right Container */
+.right-container {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal */
+.modal-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.active {
+    display: flex;
+}
+
+.modal-box {
+    max-width: 80%;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    gap: 20px;
+    border: 10px solid var(--purple);
+    position: relative;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: var(--purple);
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 30px;
+    border: 2px solid var(--light-grey);
+    font-size: 0.875rem;
+    color: var(--black);
+}
+
+.input::placeholder {
+    color: var(--light-grey);
+    font-size: 0.75rem;
+}
+
+.input:focus{
+    border: 2px solid var(--purple);
+}
+
+.button-close {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -30px;
+    right: -30px;
+    background-color: #FFF;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: var(--purple);
+    font-weight: 700;
+    border: 5px solid var(--purple);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.button-close:hover {
+    background-color: rgb(236, 236, 236);
+    color: var(--hover);
+    border-color: var(--hover);
+}
+
+.button-close:active {
+    background-color: #FFF;
+    color: var(--purple);
+    border-color: var(--purple);
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 1rem;
+    }
+    
+    body {
+        flex-direction: column;
+    }
+
+    .left-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .right-container {
+        display: none;
+    }
+
+    .button:hover {
+        background-color: none;
+    }
+    
+    .button:active {
+        background-color: var(--hover);
+    }
+
+    .button-close:hover {
+        background-color: none;
+        color: none;
+        border-color: none;
+    }
+    
+    .button-close:active {
+        background-color: rgb(236, 236, 236);
+        color: var(--hover);
+        border-color: var(--hover);
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 0.875rem;
+    }
+}
