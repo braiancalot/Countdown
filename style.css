@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 :root {
-    --black: #4D4C59;
-    --purple: #6C63FF;
+    --main-color: #4d446f;
+    --second-color: #fde9e2;
+    --light-grey: #453f5c;
+    --text-color: #453f5c;
     --hover: #3f3b91;
-    --light-grey: #C8C8C8;
-    --text-color: #9C9AB6;
   }
 
 /* Reset */
@@ -24,12 +24,10 @@ html {
 body {
     width: 100%;
     height: 100%;
-}
-
-body {
     display: flex;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(180deg, #e06c78, #Fa9284);
 }
 
 /* Left Container */
@@ -44,7 +42,6 @@ body {
 
 .info-box {
     width: auto;
-    /* height: 38%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +53,7 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 2.25rem;
-    color: var(--purple);
+    color: var(--main-color);
     letter-spacing: 0.25rem;
     margin-bottom: 50px;
     text-align: center;
@@ -74,19 +71,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 20%;
 }
 
 .timer-container .item .item-name {
     font-size: 0.875rem;
     font-weight: 300;
-    color: var(--light-grey);
+    color: var(--second-color);
 }
 
 .timer-container .item .item-number,  .timer-container .division   
 {
     font-size: 4.5rem;
     font-weight: 400;
-    color: var(--black);
+    color: var(--second-color);
 }
 
 .timer-container .division {
@@ -101,7 +99,7 @@ body {
 }
 
 .button {
-    background-color: var(--purple);
+    background-color: var(--main-color);
     padding: 15px 40px;
     border-radius: 10px;
     border: none;
@@ -116,7 +114,7 @@ body {
 }
 
 .button:active {
-    background-color: var(--purple);
+    background-color: var(--main-color);
     background-image: none;
 }
 
@@ -126,6 +124,10 @@ body {
     width: 50%;
     align-items: center;
     justify-content: center;
+}
+
+.image {
+    width: 80%;
 }
 
 /* Modal */
@@ -151,13 +153,26 @@ body {
     padding: 30px;
     border-radius: 10px;
     gap: 20px;
-    border: 10px solid var(--purple);
+    border: 10px solid var(--main-color);
     position: relative;
+    animation: modal-animation 0.3s;
+}
+
+@keyframes modal-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .modal-title {
     font-size: 1.5rem;
-    color: var(--purple);
+    color: var(--main-color);
     font-weight: 700;
     padding-bottom: 10px;
 }
@@ -169,7 +184,7 @@ body {
 
 .label {
     font-size: 1rem;
-    color: var(--black);
+    color: var(--light-grey);
     font-weight: 300;
     margin-bottom: 10px;
 }
@@ -179,18 +194,21 @@ body {
     border-radius: 10px;
     outline: none;
     margin-bottom: 30px;
-    border: 2px solid var(--light-grey);
+    border: 3px solid var(--light-grey);
     font-size: 0.875rem;
-    color: var(--black);
+    font-weight: 700;
+    color: var(--light-grey);
+    background-color: #ffffff;
 }
 
 .input::placeholder {
-    color: var(--light-grey);
+    color: #453f5c5d;
     font-size: 0.75rem;
+    font-weight: 700;
 }
 
 .input:focus{
-    border: 2px solid var(--purple);
+    border: 3px solid var(--hover);
 }
 
 .button-close {
@@ -202,9 +220,9 @@ body {
     background-color: #FFF;
     border-radius: 50%;
     font-size: 1rem;
-    color: var(--purple);
+    color: var(--main-color);
     font-weight: 700;
-    border: 5px solid var(--purple);
+    border: 5px solid var(--main-color);
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
@@ -217,8 +235,8 @@ body {
 
 .button-close:active {
     background-color: #FFF;
-    color: var(--purple);
-    border-color: var(--purple);
+    color: var(--main-color);
+    border-color: var(--main-color);
 }
 
 @media (max-width: 1400px) {
@@ -232,12 +250,20 @@ body {
 
     .left-container {
         width: 100%;
+        flex-grow: 1;
     }
 
     .right-container{
         width: 100%;
-        padding-bottom: 100px;
+        /* padding: 100px 0; */
+        height: auto;
     }
+
+    .image {
+        width: auto;
+        height: 60%;
+    }
+    
 }
 
 @media (max-width: 700px) {
@@ -266,7 +292,6 @@ body {
     }
 
     .timer-container {
-        width: auto;
         gap: 10px;
     }
 
